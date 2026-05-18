@@ -17,7 +17,7 @@ const PRODUCTS: {
     price: 5.00,
     originalPrice: 7.50,
     tag: "Sale",
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/c681a644-8d53-43b2-938e-e7eec04d1ac4.jpg",
+    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/0e696dae-7514-49b4-af5e-8fd0d9c2c28f.jpg",
   },
 ];
 
