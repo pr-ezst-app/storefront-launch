@@ -6,9 +6,20 @@ const PRODUCTS: {
   name: string;
   category: string;
   price: number;
+  originalPrice?: number;
   tag: string | null;
   image: string;
-}[] = [];
+}[] = [
+  {
+    id: 1,
+    name: "Blue Axolotl Squishy",
+    category: "Accessories",
+    price: 5.00,
+    originalPrice: 7.50,
+    tag: "Sale",
+    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/4238f984-30d6-49e4-b623-0b283855d2de.jpg",
+  },
+];
 
 const CATEGORIES = ["All", "Clothes", "Shoes", "Accessories"];
 
@@ -183,6 +194,7 @@ type Product = {
   name: string;
   category: string;
   price: number;
+  originalPrice?: number;
   tag: string | null;
   image: string;
 };
@@ -256,9 +268,16 @@ function ProductCard({
           <h3 className="font-display text-lg font-light text-foreground leading-tight">
             {product.name}
           </h3>
-          <span className="text-primary font-medium text-sm tracking-wide">
-            ${product.price}
-          </span>
+          <div className="flex flex-col items-end gap-0.5">
+            {product.originalPrice && (
+              <span className="text-muted-foreground text-xs line-through">
+                ${product.originalPrice.toFixed(2)}
+              </span>
+            )}
+            <span className="text-primary font-medium text-sm tracking-wide">
+              ${product.price.toFixed(2)}
+            </span>
+          </div>
         </div>
       </div>
     </div>
