@@ -122,8 +122,8 @@ export default function Index() {
               New Collection — SS 2026
             </p>
             <h1 className="font-display text-6xl md:text-8xl font-light leading-none text-foreground animate-fade-up stagger-2">
-              Timeless<br />
-              <span className="italic text-primary">Elegance</span>
+              ZBH Fans<br />
+              <span className="italic text-primary">Shop Here</span>
             </h1>
           </div>
           <div className="animate-fade-up stagger-3">
