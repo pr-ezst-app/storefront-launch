@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
 const PRODUCTS = [
@@ -59,6 +59,9 @@ export default function Index() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
   const [cartCount, setCartCount] = useState(0);
+  const shopRef = useRef<HTMLDivElement>(null);
+
+  const scrollToShop = () => shopRef.current?.scrollIntoView({ behavior: "smooth" });
 
   const toggleFavorite = (id: number) => {
     setFavorites((prev) =>
@@ -126,11 +129,18 @@ export default function Index() {
               <span className="italic text-primary">Shop Here</span>
             </h1>
           </div>
-          <div className="animate-fade-up stagger-3">
-            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm md:ml-auto">
+          <div className="animate-fade-up stagger-3 flex flex-col gap-6 md:ml-auto max-w-sm">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Curated pieces for those who understand that true style is quiet,
               structured, and enduring.
             </p>
+            <button
+              onClick={scrollToShop}
+              className="flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-xs tracking-[0.25em] uppercase font-medium hover:bg-yellow-400 transition-colors w-fit"
+            >
+              Shop Here
+              <Icon name="ArrowDown" size={14} />
+            </button>
           </div>
         </div>
       </section>
@@ -166,7 +176,7 @@ export default function Index() {
       </div>
 
       {/* GRID */}
-      <main className="max-w-7xl mx-auto px-6 pb-24">
+      <main ref={shopRef} className="max-w-7xl mx-auto px-6 pb-24">
         {filtered.length === 0 ? (
           <div className="text-center py-32">
             <Icon name="Heart" size={40} className="text-border mx-auto mb-4" />
