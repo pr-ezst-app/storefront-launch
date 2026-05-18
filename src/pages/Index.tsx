@@ -1,56 +1,14 @@
 import { useState, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const PRODUCTS = [
-  {
-    id: 1,
-    name: "Trench Classique",
-    category: "Clothes",
-    price: 420,
-    tag: "New",
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/7d546634-fe0c-4563-86e2-a7062249c406.jpg",
-  },
-  {
-    id: 2,
-    name: "Structured Blazer",
-    category: "Clothes",
-    price: 310,
-    tag: "Bestseller",
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/2671614e-d387-4b32-9b96-4fe40824ca06.jpg",
-  },
-  {
-    id: 3,
-    name: "Oxford Leather",
-    category: "Shoes",
-    price: 265,
-    tag: null,
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/5082523b-330c-4f36-9a4f-b918514e4188.jpg",
-  },
-  {
-    id: 4,
-    name: "Silk Scarf No. 7",
-    category: "Accessories",
-    price: 95,
-    tag: "Limited",
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/7d546634-fe0c-4563-86e2-a7062249c406.jpg",
-  },
-  {
-    id: 5,
-    name: "Wool Overcoat",
-    category: "Clothes",
-    price: 580,
-    tag: null,
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/2671614e-d387-4b32-9b96-4fe40824ca06.jpg",
-  },
-  {
-    id: 6,
-    name: "Chelsea Boots",
-    category: "Shoes",
-    price: 340,
-    tag: "New",
-    image: "https://cdn.ezst.app/projects/66d6e755-0e17-40da-84d0-ab090df6cc9a/files/5082523b-330c-4f36-9a4f-b918514e4188.jpg",
-  },
-];
+const PRODUCTS: {
+  id: number;
+  name: string;
+  category: string;
+  price: number;
+  tag: string | null;
+  image: string;
+}[] = [];
 
 const CATEGORIES = ["All", "Clothes", "Shoes", "Accessories"];
 
