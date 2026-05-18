@@ -78,7 +78,7 @@ export default function Index() {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <div className="font-display text-2xl tracking-widest text-primary">
-            MAISON
+            ZBH Store
           </div>
           <div className="hidden md:flex gap-8 text-xs tracking-[0.2em] uppercase text-muted-foreground">
             <button
@@ -195,7 +195,7 @@ export default function Index() {
       <footer className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-start justify-between gap-8">
           <div>
-            <div className="font-display text-3xl tracking-widest text-primary mb-2">MAISON</div>
+            <div className="font-display text-3xl tracking-widest text-primary mb-2">ZBH Store</div>
             <p className="text-xs text-muted-foreground tracking-wide">Clothes · Shoes · Accessories</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-2 text-xs tracking-[0.15em] uppercase text-muted-foreground">
